@@ -1,0 +1,62 @@
+ <svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .bg { fill: #1e1e1e; }
+    .text { fill: #d4d4d4; font-family: monospace; font-size: 16px; }
+    .green { fill: #4ec9b0; font-family: monospace; font-size: 16px; }
+    .success { fill: #7CFC00; font-family: monospace; font-size: 16px; }
+    .overlay { fill: rgba(80,120,255,0.15); stroke: #4f78ff; stroke-width: 2; }
+    .hidden { opacity: 0; }
+    .cursor { fill: #d4d4d4; animation: blink 1s infinite; }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    @keyframes showStep {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      100% { opacity: 1; }
+    }
+
+    .s1 { animation: showStep 1s forwards; }
+    .s2 { animation: showStep 2s forwards; }
+    .s3 { animation: showStep 3s forwards; }
+    .s4 { animation: showStep 4s forwards; }
+    .s5 { animation: showStep 5s forwards; }
+    .s6 { animation: showStep 6s forwards; }
+    .s7 { animation: showStep 7s forwards; }
+    .s8 { animation: showStep 8s forwards; }
+
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg"/>
+
+  <!-- Terminal prompt -->
+  <text x="30" y="50" class="text s1">user@host:~$ ll</text>
+  <text x="30" y="80" class="text s1">text.txt</text>
+  <text x="30" y="110" class="text s1">install.sh  README.md</text>
+
+  <!-- cat step -->
+  <text x="30" y="160" class="text s2">user@host:~$ cat text.txt</text>
+  <text x="30" y="190" class="text s2">Lorem ipsum dolor sit amet...</text>
+
+  <!-- overlay shortcut -->
+  <text x="30" y="265" class="green s3">File to copy:</text>
+
+  <!-- typing -->
+  <text x="180" y="265" class="text s5">text.txt</text>
+
+  <!-- success -->
+  <text x="30" y="330" class="success s6">[Copied: text.txt]</text>
+
+  <!-- wl-paste -->
+  <text x="30" y="380" class="text s7">user@host:~$ wl-paste</text>
+  <text x="30" y="410" class="text s8">Lorem ipsum dolor sit amet...</text>
+
+  <!-- cursor -->
+  <text x="180" y="410" class="cursor s8">█</text>
+
+</svg>
