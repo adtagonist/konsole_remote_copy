@@ -56,7 +56,7 @@
   <!-- wl-paste -->
   <text x="30" y="380" class="text s7">user@host:~$ wl-paste</text>
   <text x="30" y="410" class="text s8">This is some test text</text>
-    <text x="30" y="410" class="text s8">Now to press Meta+C</text>
+    <text x="30" y="440" class="text s8">Now to press Meta+C</text>
 
   <!-- cursor -->
   <text x="180" y="410" class="cursor s8">█</text>
