@@ -96,7 +96,7 @@ base64 (standard on most Linux systems)
 
 **Nothing happening?**
 
-Ensure qdbus6 is installed
+Ensure qdbus6 is installed\
 Verify shortcut uses the correct absolute path
 
 **Copy fails?**
