@@ -8,6 +8,7 @@
 
 No more `cat`, no more mouse selection, no more remembering obscure clipboard commands.
 
+![Demo](demo.svg)
 ---
 
 ## ✨ Features
