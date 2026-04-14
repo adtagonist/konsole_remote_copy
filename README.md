@@ -71,8 +71,8 @@ Ensure clipboard access is enabled:
 
 ## ⌨️ Keyboard Shortcut Setup
 
-1. Open System Settings → Keyboard → Shortcuts
-2. Click + Add New → Command or Script
+1. Open System Settings > Keyboard > Shortcuts
+2. Click + Add New > Command or Script
 3. Name it (e.g. Remote Copy)
 4. Set command to:
 ```bash
@@ -84,8 +84,8 @@ Ensure clipboard access is enabled:
 
 **Local Machine**
 
-KDE Plasma 6
-qdbus6 (qt6-tools)
+KDE Plasma 6\
+qdbus6 (qt6-tools)\
 libnotify (optional)
 
 **Remote Machine (if SSH)**
@@ -109,10 +109,10 @@ tail -f /var/log/syslog
 Or add your own debug logging
 
 ## 💡 Why Bother?
-Faster than copy/paste over SSH
-Cleaner than dumping file contents to terminal
-No need for scp, xclip, or custom tooling
-Works anywhere Konsole + SSH works
+Faster than copy/paste over SSH\
+Cleaner than dumping file contents to terminal\
+No need for scp, xclip, or custom tooling\
+Works anywhere Konsole + SSH works\
 Good for people who don't want to install extra software
 
 ## 📜 License
