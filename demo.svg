@@ -42,23 +42,23 @@
   <!-- cat step -->
   <text x="30" y="160" class="text s2">user@host:~$ cat text.txt</text>
   <text x="30" y="190" class="text s2">This is some test text</text>
-  <text x="30" y="210" class="text s2">Now to press Meta+C</text>
+  <text x="30" y="220" class="text s2">Now to press Meta+C</text>
 
   <!-- overlay shortcut -->
-  <text x="30" y="240" class="green s3">File to copy:</text>
+  <text x="30" y="250" class="green s3">File to copy:</text>
 
   <!-- typing -->
-  <text x="165" y="240" class="text s5">text.txt</text>
+  <text x="165" y="250" class="text s5">text.txt</text>
 
   <!-- success -->
-  <text x="30" y="270" class="success s6">[Copied: text.txt]</text>
+  <text x="30" y="280" class="success s6">[Copied: text.txt]</text>
 
   <!-- wl-paste -->
-  <text x="30" y="330" class="text s7">user@host:~$ wl-paste</text>
-  <text x="30" y="360" class="text s8">This is some test text</text>
-    <text x="30" y="390" class="text s8">Now to press Meta+C</text>
+  <text x="30" y="340" class="text s7">user@host:~$ wl-paste</text>
+  <text x="30" y="370" class="text s8">This is some test text</text>
+    <text x="30" y="400" class="text s8">Now to press Meta+C</text>
 
   <!-- cursor -->
-  <text x="30" y="450" class="cursor s8">user@host:~$ █</text>
+  <text x="30" y="460" class="cursor s8">user@host:~$ █</text>
 
 </svg>
