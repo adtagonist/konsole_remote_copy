@@ -31,7 +31,7 @@ No more `cat`, no more mouse selection, no more remembering obscure clipboard co
 File to copy:
 ```
 5. Select file (tab completion works) and press Enter  
-6. File contents are copied to your **local clipboard**
+6. File contents are copied to your **local clipboard** - even via SSH
 
 ---
 
