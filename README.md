@@ -1,44 +1,123 @@
 # Konsole Remote Copy
 
-This is a lightweight tool for KDE Konsole (Plasma 6) that allows you to copy file contents from a remote server or on your local machine, to your local system clipboard. It achieves this with **zero software required on the remote server**.
+![KDE](https://img.shields.io/badge/KDE-Plasma%206-blue)
+![Wayland](https://img.shields.io/badge/Display-Wayland-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-Why?
+**Konsole Remote Copy** is a lightweight utility for KDE Konsole that lets you **copy file contents from a remote (SSH) or local machine directly to your local clipboard**.
 
-Because sometimes you just need to copy the contents of a complete file to the clipboard, you can't install additional software on the remote end, and you really don't feel like using cat to select and copy all the text. 
+No more `cat`, no more mouse selection, no more remembering obscure clipboard commands.
 
-I am also hopeless at remembering commands, so I needed a way to trigger this with a keyboard shortcut.
+---
 
-This tool leverages the **OSC 52** terminal protocol. 
-1. The local script is triggered by a keyboard shortcut.
-2. It detects your active Konsole session and injects a "magic" command.
-3. The remote shell executes this command, encoding the file contents into a terminal escape sequence.
-4. Konsole interprets the sequence and updates your local system clipboard.
+## ✨ Features
 
-### Run the Installer
-On your local KDE-based Linux machine, run:
+- 📋 Copy files directly to your **local clipboard**
+- 🔐 Works seamlessly over **SSH**
+- ⚡ Triggered via a **keyboard shortcut**
+- 🧠 Uses your normal shell (tab completion supported)
+- 🧩 **Zero dependencies on the remote server**
 
+---
+
+## 🚀 How It Works
+
+1. Trigger via keyboard shortcut  
+2. Script detects your active Konsole session  
+3. Injects a command into the terminal  
+4. Prompt appears:
+
+File to copy:
+
+5. Select file (tab completion works) and press Enter  
+6. File contents are copied to your **local clipboard**
+
+---
+
+## 🔬 Under the Hood
+
+This tool leverages the **OSC 52** terminal protocol:
+
+- File contents are encoded with `base64` on the remote machine  
+- Sent via a terminal escape sequence  
+- Konsole receives it and updates your clipboard  
+
+👉 No software required on the remote host
+
+---
+
+## 📦 Installation
+
+Run on your local KDE machine:
+
+```bash
 ./install.sh
+```
 
-This will check for dependencies and copy the script to your `~/.local/bin/` folder.
+This will:
 
-# Configure Konsole
-You may need to enable this setting:
-- Open Konsole.
-- Go to **Settings** -> **Edit Current Profile**.
-- Select the **Mouse** tab, then click on **Miscellaneous**.
-- Tick **Allow terminal applications to handle clicks and drags**.
+- Check dependencies
+- Install the script to ~/.local/bin/
 
-### Set up the Keyboard Shortcut
-1. Open **System Settings** -> **Keyboard** -> **Shortcuts**.
-2. Click **+ Add New**, **Command or Script...** and name it `Remote Copy` or whatever you like.
-3. Set the command to: `/home/YOUR_USERNAME/.local/bin/konsole-remote-copy.sh`.
-4. Assign a shortcut like `Meta+C`.
+## ⚙️ Konsole Configuration
 
-## Requirements
-- **Local machine**: KDE Plasma 6, `qdbus6` (qt6-tools), `libnotify` (optional).
-- **Remote machine**: Any server with `base64` (Standard on almost all Linux distributions).
+Ensure clipboard access is enabled:
 
-## Troubleshooting
-- **Nothing happens?** Verify that `qdbus6` is installed and that your shortcut points to the correct absolute path of the script.
-- **Copy fails?** Ensure the "Allow terminal applications to set clipboard" setting is checked in the active Konsole profile.
-- **Syslog** Run `tail -f /var/log/syslog` and monitor the output when you press your preferred keyboard shortcut. 
+1. Open Konsole
+2. Go to Settings > Edit Current Profile
+3. Navigate to Mouse > Miscellaneous
+4. Tick > Allow terminal applications to handle clicks and drags
+
+## ⌨️ Keyboard Shortcut Setup
+
+1. Open System Settings → Keyboard → Shortcuts
+2. Click + Add New → Command or Script
+3. Name it (e.g. Remote Copy)
+4. Set command to:
+```bash
+/home/YOUR_USERNAME/.local/bin/konsole-remote-copy.sh
+```
+5. Click Input to assign a shortcut key such as Meta+C
+
+## 📋 Requirements
+
+**Local Machine**
+
+KDE Plasma 6
+qdbus6 (qt6-tools)
+libnotify (optional)
+
+**Remote Machine (if SSH)**
+
+base64 (standard on most Linux systems)
+
+## 🛠 Troubleshooting
+
+**Nothing happening?**
+
+Ensure qdbus6 is installed
+Verify shortcut uses the correct absolute path
+
+**Copy fails?**
+
+Ensure Konsole allows clipboard access from terminal apps
+
+**Debugging**
+
+tail -f /var/log/syslog
+Or add your own debug logging
+
+## 💡 Why Bother?
+Faster than copy/paste over SSH
+Cleaner than dumping file contents to terminal
+No need for scp, xclip, or custom tooling
+Works anywhere Konsole + SSH works
+Good for people who don't want to install extra software
+
+## 📜 License
+
+MIT
+
+## 🙌 Contributions
+
+Always open to new ideas and improvements to Konsole. 
