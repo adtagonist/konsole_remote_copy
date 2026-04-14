@@ -105,7 +105,7 @@ Ensure Konsole allows clipboard access from terminal apps
 
 **Debugging**
 
-tail -f /var/log/syslog
+tail -f /var/log/syslog\
 Or add your own debug logging
 
 ## 💡 Why Bother?
