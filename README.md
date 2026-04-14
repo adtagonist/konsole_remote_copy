@@ -16,7 +16,7 @@ No more `cat`, no more mouse selection, no more remembering obscure clipboard co
 🔐 Works seamlessly over SSH\
 ⚡ Triggered via a keyboard shortcut\
 🧠 Uses your normal shell (tab completion supported)\
-🧩 Zero dependencies on the remote server\
+🧩 Zero dependencies on the remote server
 
 ---
 
