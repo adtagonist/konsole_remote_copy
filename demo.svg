@@ -36,12 +36,13 @@
 
   <!-- Terminal prompt -->
   <text x="30" y="50" class="text s1">user@host:~$ ll</text>
-  <text x="30" y="80" class="text s1">text.txt</text>
-  <text x="30" y="110" class="text s1">install.sh  README.md</text>
+  <text x="30" y="80" class="text s1">0644 .rw-r--r-- 196 user 14 Apr 11:55 text.txt</text>
+  <text x="30" y="110" class="text s1">0644 .rw-r--r-- 101 user 14 Apr 11:05 other_file.test</text>
 
   <!-- cat step -->
   <text x="30" y="160" class="text s2">user@host:~$ cat text.txt</text>
-  <text x="30" y="190" class="text s2">Lorem ipsum dolor sit amet...</text>
+  <text x="30" y="190" class="text s2">This is some test text</text>
+  <text x="30" y="210" class="text s2">Now to press Meta+C</text>
 
   <!-- overlay shortcut -->
   <text x="30" y="265" class="green s3">File to copy:</text>
